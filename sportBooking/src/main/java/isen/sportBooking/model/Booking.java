@@ -2,6 +2,7 @@ package isen.sportBooking.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -10,6 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 public class Booking {
 
 	@Id
