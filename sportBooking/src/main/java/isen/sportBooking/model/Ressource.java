@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Ressource {
 	
 	@Id
-	private int id;
+	private Integer id;
 	
 	@Getter
 	@Setter

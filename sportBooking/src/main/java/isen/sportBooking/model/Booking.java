@@ -14,7 +14,7 @@ public class Booking {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	
 	@Getter
 	@Setter

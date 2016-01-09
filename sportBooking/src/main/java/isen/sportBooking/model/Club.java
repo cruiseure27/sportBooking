@@ -12,7 +12,7 @@ public class Club {
 	
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	
 	@Getter
 	@Setter
