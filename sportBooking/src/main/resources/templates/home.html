@@ -18,49 +18,56 @@
 	<script th:inline="javascript">
 		function getPath(url) {
 			// ajout du contexte Tomcat
-			var context = /*[[@{/}]]*/ '/';
+			var context = /*[[@{/}]]*/'/';
 			return context + url;
 		}
 	</script>
 
-<!-- Start Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand">SportBooking</a>
-    </div>
-  </div>
-</nav>
-<!-- Navbar End -->      
- <!-- Start Main Body Section -->
-        <div class="mainbody-section text-center">
-            <div class="container">
-                <div class="row">
-                	<div class="col-md-2"></div>
-                    <div class="col-md-4">                         
-                        <div class="menu-item green">
-	                        <p>My Account</p>
-                        </div>
-                        
-                        <div class="menu-item light-red">
-	                        <p>Book</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4"> 
-                        <div class="menu-item color">
-                                <p>My Reservation</p>    
-                        </div>
-                        
-                        <div class="menu-item blue">
-                                <p>See other rooms</p>
-                        </div>   
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Main Body Section -->
-        
-<!-- 	<th:block layout:fragment="scripts"></th:block> -->
+	<!-- Start Navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand">SportBooking</a>
+			</div>
+		</div>
+	</nav>
+	<!-- Navbar End -->
+	<!-- Start Main Body Section -->
+	<div class="mainbody-section text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-4">
+					<div class="menu-item green">
+						<p>My Account</p>
+					</div>
+					<span data-toggle="modal" data-target="#newBook">
+						<div class="menu-item light-red ">
+
+
+							<p>Book</p>
+						</div>
+					</span>
+				</div>
+
+				<div class="col-md-4">
+					<div class="menu-item color">
+						<p>My Reservation</p>
+					</div>
+
+					<div class="menu-item blue">
+						<p>See other rooms</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:replace="fragments/book :: book">Book</div>
+	<!-- End Main Body Section -->
+
+	<!-- 	<th:block layout:fragment="scripts"></th:block> -->
+
+
+
 </body>
 </html>
